@@ -4,6 +4,7 @@ package ru.pushkarev.task1;
 public class Task3 {
     public static void main(String[] args) {
         int seconds = 3600;
+
         double hour = (seconds * 1.0) / 3600;
         System.out.println(seconds + " секунд составляют " + hour + " час(а)");
     }

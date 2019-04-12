@@ -6,6 +6,7 @@ package ru.pushkarev.task1;
 public class Task2 {
     public static void main(String[] args) {
         int salaryBeforeTax = 70000;
-        System.out.println("Зарплата после подоходного налога в 13%, составляет " + 0.87 * salaryBeforeTax + " рублей");
+        double tax = 0.87;
+        System.out.println("Зарплата после подоходного налога в 13%, составляет " + tax * salaryBeforeTax + " рублей");
     }
 }

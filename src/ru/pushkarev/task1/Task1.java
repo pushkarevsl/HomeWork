@@ -5,6 +5,7 @@ package ru.pushkarev.task1;
 public class Task1 {
     public static void main(String[] args) {
         int quantity = 50;
-        System.out.println("Стоимость бензина равна " + quantity * 43 + " руб.");
+        int valueOneLitre = 43;
+        System.out.println("Стоимость бензина равна " + quantity * valueOneLitre + " руб.");
     }
 }
