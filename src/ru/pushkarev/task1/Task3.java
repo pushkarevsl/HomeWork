@@ -6,6 +6,5 @@ public class Task3 {
         int seconds = 3600;
         double hour = (seconds * 1.0) / 3600;
         System.out.println(seconds + " секунд составляют " + hour + " час(а)");
-
     }
 }
