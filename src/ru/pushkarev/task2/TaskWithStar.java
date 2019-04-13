@@ -20,11 +20,7 @@ import java.io.InputStreamReader;
 1.  Через хз какой метод, рандомный выбор числа от 1 до 100
 2.  Введите число
     Через Баффер ввод с консоли
-3. Короче делим 100 попполам и смотрим если от 0 до 50 то...., если от50 до 100 то...., и так для каждый
-   отрезок делим пополам
-4. Понял что нужно делать. Берем значение наше и прибавляем и отнимаем сначало по 50, 25, 10, 3, 1. Создавая коридор.
-И сравнивать наше значение с рандомным. А на выводе горячо, Горячее, очень и тд
-
+3.
 */
 public class TaskWithStar {
     public static void main(String[] args) throws IOException {
@@ -38,24 +34,36 @@ public class TaskWithStar {
 
         for (; ; ) {
             int val = Integer.parseInt(reader.readLine());
-
-            if (rnd < (val + 50) && rnd > (val + 50)) {
+            int delta = Math.abs((rnd - val));
+// ввел дополнительную переменную, дельта между рандомным числом и вводимым с клавиатуры.
+// И уже по мере приближения к рандомному числу, делаю вывод Тепло, Холодно и тд
+            if (delta > 25) {
+                System.out.println("Сильно холодно");
+            } else if (delta > 10) {
                 System.out.println("Тепло");
-            }
-            if (rnd < (val + 25) && rnd > (val + 25)) {
-                System.out.println("Теплее");
-            }
-            if (rnd < (val + 10) && rnd > (val + 10)) {
+            } else if (delta > 3) {
                 System.out.println("Горячо");
-            }
-            if (rnd < (val + 3) && rnd > (val + 3)) {
-                System.out.println("Почти обжегся!!!!");
-            }
-            if (rnd == val) {
-                System.out.println("You winner!!!!");
+            } else if (delta == 0) {
+                System.out.println("You are winner!!!!");
+                break;
             }
         }
     }
 }
 
-
+        /*
+        4. Понял что нужно делать. Берем значение наше и прибавляем и отнимаем сначало по 50, 25, 10, 3, 1.
+        Создавая коридор. И сравнивать наше значение с рандомным. А на выводе горячо, Горячее, очень и тд
+        if (rnd < (val + 50) && rnd > (val + 50)) {
+        System.out.println("Тепло");
+        }
+        if (rnd < (val + 25) && rnd > (val + 25)) {
+        System.out.println("Теплее");
+        }
+        if (rnd < (val + 10) && rnd > (val + 10)) {
+        System.out.println("Горячо");
+        }
+        if (rnd < (val + 3) && rnd > (val + 3)) {
+        System.out.println("Почти обжегся!!!!");
+        }
+        */
