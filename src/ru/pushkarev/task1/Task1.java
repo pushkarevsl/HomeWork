@@ -8,6 +8,7 @@ public class Task1 {
 
         int quantity = 50;
         int valueOneLitre = 43;
+
         System.out.println("Стоимость бензина равна " + quantity * valueOneLitre + " руб.");
     }
 }
