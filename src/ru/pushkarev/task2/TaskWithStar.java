@@ -29,20 +29,30 @@ public class TaskWithStar {
         System.out.println(rnd); //вывел для себя, чтоб знать и ориентироваться
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Начиная игру - ты должен ее закончить");
+        System.out.println("Но если ты хочешь сочконуть и выйти, то набери 101 ");
+        System.out.println("- - -");
         System.out.println("Введите число от 1 до 100");
 
 
         for (; ; ) {
             int val = Integer.parseInt(reader.readLine());
+
             int delta = Math.abs((rnd - val));
 // ввел дополнительную переменную, дельта между рандомным числом и вводимым с клавиатуры.
 // И уже по мере приближения к рандомному числу, делаю вывод Тепло, Холодно и тд
-            if (delta > 25) {
+            if (val == 101) {
+                System.out.println("Game over!");
+                break;
+            }
+            if (delta >= 25) {
                 System.out.println("Сильно холодно");
-            } else if (delta > 10) {
+            } else if (delta >= 15) {
                 System.out.println("Тепло");
-            } else if (delta > 3) {
+            } else if (delta > 5) {
                 System.out.println("Горячо");
+            } else if (delta > 2) {
+                System.out.println("Вот- вот уже обожжешься");
             } else if (delta == 0) {
                 System.out.println("You are winner!!!!");
                 break;
@@ -50,6 +60,7 @@ public class TaskWithStar {
         }
     }
 }
+
 
         /*
         4. Понял что нужно делать. Берем значение наше и прибавляем и отнимаем сначало по 50, 25, 10, 3, 1.
