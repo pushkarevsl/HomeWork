@@ -1,6 +1,5 @@
 package ru.pushkarev.task2;
 
-
 /*
 Создать консольное Java-приложение «Горячо-Холодно»
 1. Вначале программа «загадывает» случайное число от 1 до 100.
@@ -11,32 +10,28 @@ package ru.pushkarev.task2;
 5. Предусмотреть возможность выхода из игры до отгадывания числа.
 */
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /*
 План решения
 1.  Через хз какой метод, рандомный выбор числа от 1 до 100
 2.  Введите число
     Через Баффер ввод с консоли
-3.
 */
 public class TaskWithStar {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         System.out.print("Рандомное число = ");
         int rnd = (int) (Math.random() * 100 + 1);
         System.out.println(rnd); //вывел для себя, чтоб знать и ориентироваться
-
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Начиная игру - ты должен ее закончить");
-        System.out.println("Но если ты хочешь сочконуть и выйти, то набери 101 ");
+        System.out.println("Но если ты захочешь выйти, то набери 101 ");
         System.out.println("- - -");
         System.out.println("Введите число от 1 до 100");
 
 
-        for (; ; ) {
-            int val = Integer.parseInt(reader.readLine());
+        while (true) {
+            int val = scanner.nextInt();
 
             int delta = Math.abs((rnd - val));
 // ввел дополнительную переменную, дельта между рандомным числом и вводимым с клавиатуры.
