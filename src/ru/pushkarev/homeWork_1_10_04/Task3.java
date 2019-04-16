@@ -1,4 +1,4 @@
-package ru.pushkarev.task1;
+package ru.pushkarev.homeWork_1_10_04;
 
 //программу, которая конвертирует секунды в часы. Пример: на вход подается 3600, на выходе печатается 1 час.
 public class Task3 {
