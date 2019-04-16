@@ -1,4 +1,4 @@
-package ru.pushkarev.task2;
+package ru.pushkarev.homeWork_2_12_04;
 
 /*
 Создать консольное Java-приложение «Горячо-Холодно»
