@@ -17,12 +17,14 @@ public class Task_4_4 {
             System.out.print(arArifmetProgressia[i - 1] + " ");
         }
         System.out.println(" ");
-        for (int i = 1; i < quantity + 1; i++) {
+
+        for (int i = 1; i < quantity; i++) {
             arGeometrProgressia[0] = firstElement;
             arGeometrProgressia[i] = arGeometrProgressia[i - 1] * delta;
-            System.out.println("arGeometrProgressia[" + (i - 1) + "] = " + arGeometrProgressia[i - 1] + " ");
         }
-
-
+//  для чего дополнительный цикл? Если проще то убрал заморочку с выводом первого( нулевого) элемента
+        for (int i = 0; i < quantity; i++) {
+            System.out.println("arGeometrProgressia[" + (i + 1) + "] = " + arGeometrProgressia[i] + " ");
+        }
     }
 }
