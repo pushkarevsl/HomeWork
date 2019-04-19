@@ -1,5 +1,7 @@
 package ru.pushkarev.homeWork_4_15_04;
 
+//таблица умножения
+
 public class Task_4_3 {
     public static void main(String[] args) {
 
