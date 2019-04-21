@@ -1,4 +1,4 @@
-package ru.pushkarev.homeWork_4_15_04;
+package ru.pushkarev.homeWork_15_04;
 
 /*
         Написать программу для поиска минимального из двух чисел.
