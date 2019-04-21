@@ -1,10 +1,10 @@
 package ru.pushkarev.homeWork_19_04.appliancesStorage;
 
-import ru.pushkarev.homeWork_19_04.Storage;
 
-public class AppliancesStorage extends Storage {
+public class AppliancesStorage {
     // бытовая техника
 
-    private String nameAppliances; //создаем переменную Название бытоваой техники
+    private String titleAppliances; //создаем переменную название бытоваой техники
+    private TypeAppliances[] typeAppliances = new TypeAppliances[5]; // массив, содержит 5 типов быт техники
 
 }
