@@ -1,6 +1,9 @@
 package ru.pushkarev.homeWork_19_04;
 
-public class ThingsStorage extends Storage {
+//склад с вещами
+
+public class KitchenStorage extends ProductStorage {
+
 
     private String homeThings;
 

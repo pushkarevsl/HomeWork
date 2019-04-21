@@ -1,6 +1,9 @@
 package ru.pushkarev.homeWork_19_04;
 
-public class Storage {
+//создал склад с полями
+
+public class ProductStorage {
+
     private String nameProduct;
     private String sizeBox;
     private int price;
@@ -8,7 +11,7 @@ public class Storage {
 
     @Override
     public String toString() {
-        return "Storage{" +
+        return "ProductStorage{" +
                 "nameProduct='" + nameProduct + '\'' +
                 ", sizeBox='" + sizeBox + '\'' +
                 ", price=" + price +
