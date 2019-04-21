@@ -1,4 +1,4 @@
-package ru.pushkarev.homeWork_4_15_04.task_4_4;
+package ru.pushkarev.homeWork_4_15_04;
 
 import java.util.Scanner;
 
@@ -33,3 +33,4 @@ public class Task_4_4 {
 
     }
 }
+
