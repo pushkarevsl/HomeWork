@@ -9,11 +9,15 @@ public class GardenApp {
 
         potato1.setSize("big");
 
+
         GreenHouse forWinter = new GreenHouse();
+        forWinter.setTitle("Зимняя теплица");
+
         GardenBed second = new GardenBed();
 
         second.setPotatoes(new Potato[]{potato1});
 
+        System.out.println(second);
         System.out.println(forWinter);
     }
 }
