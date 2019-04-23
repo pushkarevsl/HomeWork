@@ -4,7 +4,9 @@ import java.util.Arrays;
 
 public class GardenBed { // грядка
     private String title;
+
     private Potato[] potatoes = new Potato[10];
+
 
     @Override
     public String toString() {
