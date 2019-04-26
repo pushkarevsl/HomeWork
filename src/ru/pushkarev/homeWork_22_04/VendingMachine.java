@@ -119,6 +119,7 @@ public class VendingMachine {
             default:
                 System.out.println("Вы ввели не верное значение, попробуйте снова");
         }
+        scanner.close();
     }
 
 
@@ -158,6 +159,7 @@ public class VendingMachine {
                 ", key=" + key +
                 '}';
     }
+
 }
 /*
 
