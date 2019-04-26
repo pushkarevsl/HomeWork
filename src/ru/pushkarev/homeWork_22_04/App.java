@@ -25,7 +25,7 @@ public class App {
 
         System.out.println("Захотелось напитка? Введи единицу! Покажу барную карту!");
 
-        Drinks drinks[] = new Drinks[]{Drinks.TEA, Drinks.COFE, Drinks.WATER, Drinks.PEPSI, Drinks.COLA};
+        Drinks[] drinks = new Drinks[]{Drinks.TEA, Drinks.COFE, Drinks.WATER, Drinks.PEPSI, Drinks.COLA};
 
         VendingMachine vm = new VendingMachine(drinks);
 

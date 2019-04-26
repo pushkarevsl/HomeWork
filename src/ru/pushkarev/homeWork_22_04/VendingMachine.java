@@ -18,7 +18,6 @@ public class VendingMachine {
     private Drinks[] drinks;
     private static int money;
     private int key;
-    private int difference;
 
 
     private Scanner scanner = new Scanner(System.in);
@@ -34,7 +33,7 @@ public class VendingMachine {
         }
     }
 
-    public void addMoney() {
+    void addMoney() {
         System.out.println("Определился? Внеси нужную сумму, в купюроприемник!");
         System.out.println(" ");
         System.out.println("Внеси сумму за желаемый напиток");
@@ -42,9 +41,10 @@ public class VendingMachine {
         System.out.println("Вы внесли " + money + " руб.");
     }
 
-    public void giveMeADrink() {
+    void giveMeADrink() {
         System.out.println("Введите номер напитка из барной карты.");
         key = scanner.nextInt();
+        int difference;
         switch (key) {
             case 1:
                 if (money == 100) {
@@ -123,7 +123,7 @@ public class VendingMachine {
     }
 
 
-    public VendingMachine(Drinks[] drinks) {
+    VendingMachine(Drinks[] drinks) {
         this.drinks = drinks;
     }
 
@@ -140,7 +140,7 @@ public class VendingMachine {
     }
 
     public void setMoney(int money) {
-        this.money = money;
+        VendingMachine.money = money;
     }
 
     public int getKey() {
