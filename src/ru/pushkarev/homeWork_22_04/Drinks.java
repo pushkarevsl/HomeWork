@@ -2,7 +2,7 @@ package ru.pushkarev.homeWork_22_04;
 
 public enum Drinks {
 
-    TEA("Чай", 100), COFE("Кофе", 100), WATER("Вода", 50),
+    TEA("Чай", 100), COFE("Кофе", 120), WATER("Вода", 50),
     PEPSI("Пепси", 150), COLA("Кола", 150);
 
 
