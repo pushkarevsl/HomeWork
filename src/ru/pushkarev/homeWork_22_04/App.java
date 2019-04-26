@@ -25,19 +25,16 @@ public class App {
 
         System.out.println("Захотелось напитка? Введи единицу! Покажу барную карту!");
 
-        Scanner scanner = new Scanner(System.in);
-
-        int number = scanner.nextInt();
-
-
         Drinks drinks[] = new Drinks[]{Drinks.TEA, Drinks.COFE, Drinks.WATER, Drinks.PEPSI, Drinks.COLA};
 
         VendingMachine vm = new VendingMachine(drinks);
 
+        vm.showMenu();
 
-        for (int i = 0; i < drinks.length; i++) {
-            System.out.println(drinks[i].getTitle() + " " + drinks[i].getPrice()+" руб");
-        }
+        vm.addMoney();
+
+        vm.giveMeADrink();
+
 
     }
 
