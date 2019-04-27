@@ -1,4 +1,4 @@
-package ru.pushkarev.homeWork_1_10_04;
+package ru.pushkarev.homeWork_10_04_lection_2;
 
 /*
 программу, которая считает стоимость бензина (на вход программе передается кол-во литров, на выходе печатается
