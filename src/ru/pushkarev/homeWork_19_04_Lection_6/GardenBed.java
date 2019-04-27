@@ -2,6 +2,7 @@ package ru.pushkarev.homeWork_19_04_Lection_6;
 
 import java.util.Arrays;
 
+
 public class GardenBed { // грядка
     private String title;
 
