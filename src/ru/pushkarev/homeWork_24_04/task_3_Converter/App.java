@@ -1,12 +1,6 @@
-package ru.pushkarev.homeWork_24_04.task_1_Calculator;
+package ru.pushkarev.homeWork_24_04.task_3_Converter;
 
 /**
- * 1. Поэксперементировать с ключевым словом final
- * <p>
- * 2. Реализовать класс Calculator, который будет содержать статические методы для операций вычитания,
- * сложения, умножения, деления и взятия процента от числа. Класс должен работать как с целыми числами,
- * так и с дробями.
- * <p>
  * 3. Реализовать класс в конструкторе которого будет счетчик количества создаваемых объектов.
  * Написать метод для получения информации о количестве.
  * <p>
@@ -15,7 +9,21 @@ package ru.pushkarev.homeWork_24_04.task_1_Calculator;
  * (на вход передавать договор, на выходе получаем акт).
  */
 
-public class Task_1_Calculator {
+
+public class App {
+
+    private String title;
 
 
+    public App(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }
