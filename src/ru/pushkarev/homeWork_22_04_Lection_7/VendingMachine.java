@@ -1,5 +1,5 @@
 
-package ru.pushkarev.homeWork_22_04;
+package ru.pushkarev.homeWork_22_04_Lection_7;
 
 import java.util.Arrays;
 import java.util.Scanner;
