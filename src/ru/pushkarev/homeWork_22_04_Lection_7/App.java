@@ -1,10 +1,5 @@
 
-package ru.pushkarev.homeWork_22_04;
-
-import com.sun.tools.javac.file.SymbolArchive;
-
-import java.util.Arrays;
-import java.util.Scanner;
+package ru.pushkarev.homeWork_22_04_Lection_7;
 
 /**
  * - запрашивает данные у пользователя через сканер
