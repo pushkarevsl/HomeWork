@@ -1,4 +1,4 @@
-package ru.pushkarev.homeWork_24_04.task_3_Converter;
+package ru.pushkarev.homeWork_24_04_Lection_8.task_3_Converter;
 
 /**
  * 3. Реализовать класс в конструкторе которого будет счетчик количества создаваемых объектов.

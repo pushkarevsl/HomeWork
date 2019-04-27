@@ -1,4 +1,4 @@
-package ru.pushkarev.homeWork_24_04.task_2_Calculator;
+package ru.pushkarev.homeWork_24_04_Lection_8.task_2_Calculator;
 
 public class Procent extends Main {
     static void procent(int x, double y) {
