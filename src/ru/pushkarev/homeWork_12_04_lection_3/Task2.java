@@ -1,4 +1,4 @@
-package ru.pushkarev.homeWork_2_12_04;
+package ru.pushkarev.homeWork_12_04_lection_3;
 /*
 
 программу,которая считает зарплату «на руки» (на вход программе передается величина зарплаты,

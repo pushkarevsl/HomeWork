@@ -1,4 +1,4 @@
-package ru.pushkarev.homeWork_2_12_04;
+package ru.pushkarev.homeWork_12_04_lection_3;
 
 //программу, которая конвертирует секунды в часы. Пример: на вход подается 3600, на выходе печатается 1 час.
 
