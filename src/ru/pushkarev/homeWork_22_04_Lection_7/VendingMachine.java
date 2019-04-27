@@ -161,26 +161,3 @@ public class VendingMachine {
     }
 
 }
-/*
-
-switch (money){
-        case 100:
-        System.out.println("Спасибо. Ожидайте ваш чай.");
-        break;
-        case 120:
-        System.out.println("Спасибо. Ожидайте ваш кофе");
-        case 50:
-        System.out.println("Спасибо. Возьмите свою воду");
-        case 150:
-        System.out.println("Введите 1 если хотите Колу или 2 если желаете Пепси");
-        switch (money){
-        case 1:
-        System.out.println("Возьмите свою колу");
-        break;
-default:
-        System.out.println("Возьмите свой напиток");
-
-        }
-default:
-
-        }*/
