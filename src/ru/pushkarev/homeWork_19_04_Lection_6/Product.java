@@ -1,4 +1,4 @@
-package ru.pushkarev.homeWork_19_04.garden;
+package ru.pushkarev.homeWork_19_04_Lection_6;
 
 import java.time.LocalDate;
 
