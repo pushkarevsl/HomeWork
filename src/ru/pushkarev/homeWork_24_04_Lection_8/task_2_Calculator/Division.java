@@ -8,7 +8,7 @@ public class Division extends Main {
         System.out.println("Результат деления " + x / y);
     }
 
-    public static void division(double x, double y) {
+    static void division(double x, double y) {
 
         System.out.println("Результат деления " + x / y);
     }
