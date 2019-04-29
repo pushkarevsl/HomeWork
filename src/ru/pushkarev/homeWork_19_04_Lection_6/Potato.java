@@ -22,5 +22,6 @@ public class Potato extends Product {
         return "Potato{" +
                 "size='" + size + '\'' +
                 '}';
+
     }
 }
