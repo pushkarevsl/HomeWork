@@ -11,19 +11,18 @@ public class Main {
     private static int counter = 0;
 
     public static void main(String[] args) {
-        Main first = new Main();
-        first.count();
+        Main first = new Main(counter);
         System.out.println(getCounter());
 
-        Main second = new Main();
-        second.count();
+        Main second = new Main(counter);
         System.out.println(getCounter());
 
-        Main third = new Main();
-        third.count();
+        Main third = new Main(counter);
         System.out.println(getCounter());
+    }
 
-
+    private Main(int count) {
+        this.count();
     }
 
     private void count() {
