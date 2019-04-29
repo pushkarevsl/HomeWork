@@ -11,9 +11,13 @@ public class Main {
     public static void main(String[] args) {
 
         Deducation.deducation(100, 21);
+
         Division.division(100, 23.0);
+
         Multiplication.multiplication(12, 31);
+
         Procent.procent(1955, 32);
+
         Summa.sum(12, 32);
     }
 
