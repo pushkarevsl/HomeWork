@@ -2,9 +2,15 @@ package ru.pushkarev.homeWork_24_04_Lection_8.task_4_Converter;
 
 public class Contract {
 
-    private int idNumber;
+    private static int idNumber;
     private int data;
     private String titleProduct;
+
+    public Contract(int idNumber, int data, String titleProduct) {
+        this.idNumber = idNumber;
+        this.data = data;
+        this.titleProduct = titleProduct;
+    }
 
     @Override
     public String toString() {
@@ -15,13 +21,7 @@ public class Contract {
                 '}';
     }
 
-    Contract(int idNumber, int data, String titleProduct) {
-        this.idNumber = idNumber;
-        this.data = data;
-        this.titleProduct = titleProduct;
-    }
-
-    int getIdNumber() {
+    public int getIdNumber() {
         return idNumber;
     }
 
@@ -29,7 +29,7 @@ public class Contract {
         this.idNumber = idNumber;
     }
 
-    int getData() {
+    public int getData() {
         return data;
     }
 
