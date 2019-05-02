@@ -1,4 +1,4 @@
-package ru.pushkarev.homeWork_26_04_Lection_9.task_1_Person;
+package ru.pushkarev.homeWork_26_04_Lection_9.task_1_and_2_Person;
 
 /**
  * 1. Написать абстрактный класс Person с абстрактным методом getName.
