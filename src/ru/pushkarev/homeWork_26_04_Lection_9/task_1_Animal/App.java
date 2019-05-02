@@ -6,6 +6,7 @@ package ru.pushkarev.homeWork_26_04_Lection_9.task_1_Animal;
  * Метод getName должен выводит название каждого животного.
  */
 
+
 public class App {
     public static void main(String[] args) {
 
