@@ -1,11 +1,14 @@
 package ru.pushkarev.story;
 
 
-abstract class StoryPerson {
+public abstract class StoryPerson {
 
     abstract void name();
 
     abstract void storyName();  //название сказки
 
-    abstract void iAmReal();// я существую
+    void iAmReal()// я реальный, существую
+    {
+
+    }
 }

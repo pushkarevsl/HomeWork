@@ -3,6 +3,7 @@ package ru.pushkarev.story;
 public class BabaYaga extends StoryPerson implements Flyeble, Runeble {
 
 
+
     private String loveEatSmallChild = "Я люблю есть детишек";
 
 
@@ -48,7 +49,7 @@ public class BabaYaga extends StoryPerson implements Flyeble, Runeble {
 
     @Override
     public void fastRun() {
-        System.out.println("А еще я быстро бегаю, когда страшно");
+        System.out.println("А еще я быстро бегаю.");
     }
 
     @Override
