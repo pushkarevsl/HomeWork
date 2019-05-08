@@ -5,10 +5,9 @@ public abstract class StoryPerson {
 
     abstract void name();
 
-    abstract void storyName();  //название сказки
+    void storyName() {
+        System.out.println("dasa");
+    } //название сказки
 
-    void iAmReal()// я реальный, существую
-    {
 
-    }
 }

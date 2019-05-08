@@ -1,8 +1,8 @@
 package ru.pushkarev.story;
 
-public interface Flyeble {
+public interface Flyable {
 
     void fly();
 
-    void pikirovat();
+
 }

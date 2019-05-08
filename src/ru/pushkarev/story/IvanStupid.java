@@ -1,33 +1,30 @@
 package ru.pushkarev.story;
 
-public class IvanStupid extends StoryPerson implements Runeble {
-
-    private String ohMyStupidHead = "Упс, опять что - то не сделал";
+public class IvanStupid extends GoodHero {
 
 
     @Override
-    public void fastRun() {
-        System.out.println("Я дурак, я не бегаю!" + " " + ohMyStupidHead);
-    }
-
-    @Override
-    public void slowlyWent() {
-
+    void guarder() {
+        System.out.println("Я супермен!");
     }
 
     @Override
     void name() {
-        System.out.println("Иван - дурак");
+        System.out.println("Иван дурак");
     }
 
     @Override
     void storyName() {
-        System.out.println("Сказка про меня, про Ивана");
+        System.out.println("Сказка про Ивана дурака.");
     }
 
     @Override
-    void iAmReal() {
-        System.out.println("Таких как я много в реальном мире");
+    public void run() {
+        System.out.println("Не бегу от трудностей!");
+    }
+
+    @Override
+    public void fly() {
 
     }
 }
