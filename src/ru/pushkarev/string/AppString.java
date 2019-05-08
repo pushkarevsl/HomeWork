@@ -16,13 +16,18 @@ import java.util.Scanner;
 
 public class AppString {
 
-    String s;
-
     public static void main(String[] args) {
 
+        String s;
         Scanner scanner = new Scanner(System.in);
+        s = scanner.nextLine();
 
-        String s = scanner.nextLine();
+        String s2 = s.replaceAll("бяка", " «вырезано цензурой» ");
+
+        System.out.println(s2);
+
+
+// kacklakc бяка воттстс бяка
 
 
     }
