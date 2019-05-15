@@ -1,5 +1,7 @@
-package ru.pushkarev.homeWork_MyException;
+package ru.pushkarev.homeWork_MyException.homeWork_08_05_Exceptiop_part_1;
 
+
+import ru.pushkarev.homeWork_MyException.homeWork_08_05_Exceptiop_part_1.DivisionByZeroException;
 
 public class HelloWorld {
 
