@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 
 /**
- * не присвоено значение первому эдементу массива. Если он нам потребуется и мы захотим его взять, то вылетит
- * NullPointerException(). Если вводим число превышающее число, количество элементов в массиве, то вылетает
+ * Не присвоено значение первому элементу массива. Если он нам потребуется и мы захотим его взять, то вылетит
+ * NullPointerException(). Если вводим число превышающее, количество элементов в массиве, то вылетает
  * ArrayIndexOutOfBoundsException
  */
 public class MainClass {
@@ -21,7 +21,6 @@ public class MainClass {
 
         try {
             System.out.println(integers[number]);
-
             if (integers[1] == null) {
                 throw new NullPointerException();
             }
