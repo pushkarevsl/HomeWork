@@ -2,6 +2,8 @@ package ru.pushkarev.homeWork_MyException.homeWork_13_05_Exceptiop_part_2;
 
 import java.util.Scanner;
 
+import static ru.pushkarev.homeWork_MyException.homeWork_13_05_Exceptiop_part_2.MotherException.*;
+
 public class Child {
 
     public static void showMenu(Food[] foods) {
@@ -10,66 +12,33 @@ public class Child {
         }
     }
 
+
     public static void doEat() {
 
         Scanner scanner = new Scanner(System.in);
 
-        while (scanner.hasNext()) {
+        do {
             String scan = scanner.next();
             switch (scan) {
                 case "суп": {
-                    if (Math.random() < 0.3) {
-                        System.out.println("съел … за обе щеки, твой " + Food.SOOP.getTitle());
-                        System.out.println("Спасибо мама");
-
-                    } else {
-                        System.out.println(" - Фу, херня какая - то");
-                        System.out.println("Бдыщь");
-                        System.out.println(" - Спасибо мама");
-                    }
+                    delishisSoop();
                     break;
                 }
                 case "картошка": {
-                    if (Math.random() < 0.2) {
-                        System.out.println("съел … за обе щеки, моя любимая " + Food.POTATO.getTitle());
-                        System.out.println("Спасибо мама");
-
-                    } else {
-                        System.out.println(" - Фу, херня какая - то");
-                        System.out.println("Бдыщь");
-                        System.out.println(" - Спасибо мама");
-                    }
+                    delishisPotato();
                     break;
                 }
                 case "овсянка": {
-                    if (Math.random() < 0.4) {
-                        System.out.println("съел … за обе щеки, эх снова, эта " + Food.PORRIDGE.getTitle());
-                        System.out.println("Спасибо мама");
-
-                    } else {
-                        System.out.println(" - Фу, херня какая - то");
-                        System.out.println("Бдыщь");
-                        System.out.println(" - Спасибо мама");
-
-                    }
+                    delishisPorridge();
                     break;
                 }
                 case "вкусняшка": {
-                    if (Math.random() < 0.9) {
-                        System.out.println("съел … за обе щеки, а теперь главная " + Food.DESERT.getTitle());
-                        System.out.println("Спасибо мама");
-
-                    } else {
-                        System.out.println(" - Фу, херня какая - то");
-                        System.out.println("Бдыщь");
-                        System.out.println(" - Спасибо мама");
-
-                    }
+                    delishisDesert();
                     break;
                 }
-
             }
-        }
+        } while (scanner.hasNext());
     }
+
 
 }

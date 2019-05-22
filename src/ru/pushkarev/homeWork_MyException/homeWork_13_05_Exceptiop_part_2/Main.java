@@ -1,7 +1,5 @@
 package ru.pushkarev.homeWork_MyException.homeWork_13_05_Exceptiop_part_2;
 
-import java.util.Scanner;
-
 /**
  * Написать программу "воспитанный ребенок".
  * <p>
@@ -31,6 +29,7 @@ public class Main {
         child.showMenu(foods);
 
         child.doEat();
+
 
     }
 }
