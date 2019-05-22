@@ -4,6 +4,6 @@ public class MyUnNameException extends RuntimeException {
 
     @Override
     public String getMessage() {
-        return "Спасибо, было вкусно! ";
+        return "Бдыщь!! подзатыльник.";
     }
 }
