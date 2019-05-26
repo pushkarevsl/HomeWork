@@ -2,8 +2,8 @@ package ru.pushkarev.homeWork_MyException.homeWork_15_05_Exception_part_3.vendin
 
 public enum Drinks {
 
-    TEA("Чай", 100), COFE("Кофе", 120), WATER("Вода", 50),
-    PEPSI("Пепси", 150), COLA("Кола", 150);
+    TEA(" Чай   ", 100), COFE(" Кофе  ", 120), WATER(" Вода  ", 50),
+    PEPSI(" Пепси ", 150), COLA(" Кола  ", 150);
 
 
     @Override

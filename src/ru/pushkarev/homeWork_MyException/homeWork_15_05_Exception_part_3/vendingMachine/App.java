@@ -13,27 +13,21 @@ package ru.pushkarev.homeWork_MyException.homeWork_15_05_Exception_part_3.vendin
  */
 
 
-public class App {
+public class App extends InputMismatchException {
 
 
     public static void main(String[] args) {
 
-        System.out.println("Захотелось напитка? Введи единицу! Покажу барную карту!");
-
         Drinks[] drinks = new Drinks[]{Drinks.TEA, Drinks.COFE, Drinks.WATER, Drinks.PEPSI, Drinks.COLA};
-
         VendingMachine vm = new VendingMachine(drinks);
 
-        vm.showMenu();
 
+        vm.showMenu();
         vm.addMoney();
 
         vm.giveMeADrink();
 
-
     }
-
-
 }
 
 
