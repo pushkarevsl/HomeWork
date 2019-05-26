@@ -2,6 +2,11 @@ package ru.pushkarev.homeWork_17_05_File_Path;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 
 public class FileTest {
     /**
@@ -13,7 +18,7 @@ public class FileTest {
      * сдвигая название файла/каталога на соответствующее количество пробелов.
      */
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         System.out.println("= = =  Создаю файл и каталог = = =");
 
@@ -25,6 +30,15 @@ public class FileTest {
             System.out.println("Произошла ошибка при создании файла");
         }
 
+      /*  System.out.println(" ");
+        System.out.println("++++ Копирую файл +++++");
+        System.out.println(" ");
+        Path path = Files.createFile(Paths.get("/Users/a1/IdeaProjects/HomeWork/path.txt"));
+
+        path = Files.copy(path, Paths.get("/Users/a1/IdeaProjects/HomeWork/fileCopy"), REPLACE_EXISTING) ;
+        System.out.println(path.getFileName());
+*/
+        System.out.println(" ");
         System.out.println("= = =  Переименовываем фаил + + +");
 
         File newFile = new File("text2.txt");
@@ -36,6 +50,7 @@ public class FileTest {
         System.out.println(newFile.renameTo(file));
         System.out.println(file.getName());
 
+        System.out.println(" ");
         System.out.println("= = = Удаление файла + = +");
 
         System.out.println("Удаление файла " + newFile.getName() + ": " + newFile.delete() + ", а все потому, " +
@@ -45,8 +60,6 @@ public class FileTest {
 
         System.out.println(" ");
         System.out.println("- - - - А теперь каталоги - - - -");
-        System.out.println(" ");
-
 
         File dir = new File("dir/a/b");
         dir.mkdir();
