@@ -16,34 +16,44 @@ import java.io.*;
  * потоки обязательно должны закрываться
  * отсутствие файла на диске - не ошибка, а частный случай пустой библиотеки
  */
-public class Main {
+public class Main implements Serializable {
 
-    public static void main(String[] args) {
-        String fileName = "MyLybrary.bin";
+    private static final String fileName = "Library.bin";
+
+    public static void main(String[] args) throws Exception {
+
         Library library = new Library();
 
-        Book book1 = new Book("Букварь", "Народный", 21);
-        library.addBook(book1);
-        Book book2 = new Book("Азбука", "Народный", 12);
-        library.addBook(book2);
+        Book book1 = new Book("Букварь", "Народ", 100);
+        library.arrayBook(book1);
+        Book book2 = new Book("Азбука", "Народ", 50);
+        library.arrayBook(book2);
 
         library.listBooks();
 
-        // Записываем в фаил
-        try (OutputStream os = new FileOutputStream(fileName);
-             DataOutputStream dos = new DataOutputStream(os)) {
+        save(library);
+
+        load(library);
 
 
-        } catch (IOException e) {
-            e.printStackTrace();
+    }
+
+    private static void load(Library library) throws IOException, ClassNotFoundException {
+        try (ObjectInputStream ois = new ObjectInputStream(
+                new FileInputStream(fileName)
+        )) {
+
+            System.out.println(ois.readObject());
         }
-        // Достаем данные из файла
-        try (InputStream fis = new FileInputStream(fileName);
-             DataInputStream dis = new DataInputStream(fis);
-        ) {
+        }
 
-        } catch (IOException e) {
-            e.printStackTrace();
+
+    private static void save(Library library) throws IOException {
+        try (ObjectOutputStream oos = new ObjectOutputStream(
+                new FileOutputStream(fileName))) {
+            oos.writeObject(library);
         }
     }
+
+
 }
