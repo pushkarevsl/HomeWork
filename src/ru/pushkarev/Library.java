@@ -1,4 +1,4 @@
-package ru.pushkarev.homeWork_20_05_Input_and_OutputStream;
+package ru.pushkarev;
 
 import java.io.Serializable;
 
