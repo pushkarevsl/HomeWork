@@ -2,17 +2,18 @@ package ru.pushkarev.homeWork_20_05_Input_and_OutputStream;
 
 import java.io.*;
 
+
 /**
  * Есть набор объектов типа "Книга". Каждая книга имеет название, автора, год издания. Можно больше, по желанию.
- * <p>
+ *
  * Программа должна уметь:
- * <p>
+ *
  * добавлять книгу в библиотеку.
  * показывать список книг в библиотеке.
  * восстанавливать содержимое библиотеки после перезапуска.
  * показывать соответствующее сообщение в случае ошибок.
  * Важно!
- * <p>
+ *
  * потоки обязательно должны закрываться
  * отсутствие файла на диске - не ошибка, а частный случай пустой библиотеки
  */
@@ -29,23 +30,24 @@ public class Main implements Serializable {
         Book book2 = new Book("Азбука", "Народ", 50);
         library.arrayBook(book2);
 
-        library.listBooks();
+        library.listBooks(); //просто печатаем содержимое
 
-        save(library);
+        save(library); // сохраняем, записываем поток в файл
 
-        load(library);
+        Library library1 = load(); // загружаем в новую библиотеку
 
+        System.out.println(" ");
+        library1.listBooks();// печатаем новую библиотеку
 
     }
 
-    private static void load(Library library) throws IOException, ClassNotFoundException {
+    private static Library load() throws IOException, ClassNotFoundException {
         try (ObjectInputStream ois = new ObjectInputStream(
                 new FileInputStream(fileName)
         )) {
-
-            System.out.println(ois.readObject());
+            return (Library) ois.readObject();
         }
-        }
+    }
 
 
     private static void save(Library library) throws IOException {
