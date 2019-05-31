@@ -1,7 +1,5 @@
 package ru.pushkarev.homeWork_20_05_Library;
 
-import ru.pushkarev.homeWork_20_05_Library.Book;
-
 import java.io.Serializable;
 
 public class Library implements Serializable {
