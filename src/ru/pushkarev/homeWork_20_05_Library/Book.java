@@ -1,4 +1,4 @@
-package ru.pushkarev;
+package ru.pushkarev.homeWork_20_05_Library;
 
 import java.io.Serializable;
 
