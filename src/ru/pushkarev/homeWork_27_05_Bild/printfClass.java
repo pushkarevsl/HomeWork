@@ -36,54 +36,26 @@ import java.util.Scanner;
  * Все данные спарсили. выводим в чек
  */
 
-public class Main {
+public class printfClass {
 
     public static void main(String[] args) {
-        String[] title = new String[50];
-        Double[] price = new Double[50];
 
-        System.out.printf("%-20s%-10s%-11s%-9s%n", "Наименование", "Цена", "Кол-во", "Стоимость");
-        System.out.printf("==================================================");
-        System.out.println(" ");
+        System.out.printf ("%-25s%-10s%-10s%-9s%n", "Наименование", "Цена", "Кол-во", "Стоимость");
+        System.out.printf ("======================================================");
+        System.out.println (" ");
 
-        try (FileReader fr = new FileReader("products.txt");
-             Scanner scanner = new Scanner(fr)
-        ) {
-            scanner.useLocale(Locale.ENGLISH);
+        System.out.printf ("%-24s%-8.2f%-3s%-2.3f%6s%7.2f%n", "Колбаса", 315.99, "x", 0.315, "=", 99.54);
+        System.out.printf ("%-24s%-8.2f%-3s%-2.3f%6s%7.2f%n", "Сыр Костромской", 352.99, "x", 0.270, "=", 95.31);
+        System.out.printf ("%-24s%-8.3f%-3s%-2.3f%6s%7.2f%n", "Картошка", 25.00, "x", 4.600, "=", 115.00);
+        System.out.printf ("%-24s%-8.2f%-3s%5d%6s%7.2f%n", "Молоко топленое", 62.20, "x", 3, "=", 186.60);
+        System.out.printf ("%-24s%-8.2f%-3s%5d%6s%7.2f%n", "Яйцо куриное", 39.90, "x", 2, "=", 79.80);
+        System.out.printf ("%-24s%-8.2f%-3s%5d%6s%7.2f%n", "Масло сливочное", 98.50, "x", 2, "=", 197.00);
+        System.out.printf ("%-24s%-8.2f%-3s%-2.3f%6s%7.2f%n", "Грудка цыпленка", 143.90, "x", 1.207, "=", 173.69);
+        System.out.printf ("%-24s%-8.2f%-3s%5d%6s%6.2f%n", "Пиво светлое", 79.80, "x", 20, "=", 1596.00);
 
-            while ((scanner.hasNext())) {
-                for (int i = 0; i < title.length; i++) {
-                    if (scanner.hasNextDouble()) {
-                        double d = scanner.nextDouble();
-                        price[i] = d;
-                        //System.out.println(d);
-                    } else if (scanner.hasNextLine()) {
-                        String s = scanner.nextLine();
-                        title[i] = s;
-                        //System.out.println(s);
-                    }
-                }
-            }
+        System.out.printf ("======================================================");
+        System.out.println (" ");
+        System.out.printf ("%-30s%23.2f%n", "Итого: ", 2542.94);
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        for (int i = 0; i < title.length; i++) {
-            if (title[i] != null) {
-                System.out.println(title[i]);
-            }
-        }
-        double t = 0;
-        for (int i = 0; i < price.length + 1; i++) {
-            if (price[i] == null) {
-                price[i] = t;
-                price[i] = price[i + 1];
-
-
-            }
-        }
-
-
-        // System.out.printf("%-30s%n", "Итого: ");
     }
 }
