@@ -26,17 +26,20 @@ public class ReaderFile {
             System.out.printf ("%-25s%-10s%-10s%-9s%n", "Наименование", "Цена", "Кол-во", "Стоимость");
             System.out.printf ("=======================================================");
             System.out.println (" ");
+            float sum = 0;
             while ((scanner.hasNext ( ))) {
                 String name = scanner.nextLine ( );
                 float quantity = scanner.nextFloat ( );
                 float price = scanner.nextFloat ( );
                 float result = price * quantity;
 
-                System.out.printf ("%-24s%-8.2f%-3s%-2.3f%6s%-8.3f%n", name, price, "x", quantity, "=", result);
+                System.out.printf ("%-24s%-8.2f%-3s%-2.3f%6s%8.3f%n", name, price, "x", quantity, "=", result);
                 scanner.nextLine ( );
-
+                sum += result;
             }
             System.out.printf ("=======================================================");
+            System.out.println (" ");
+            System.out.printf ("%-30s%23.3f%n", "Итого: ", sum);
 
         } catch (IOException e) {
             e.printStackTrace ( );
