@@ -7,38 +7,42 @@ import java.util.Scanner;
 
 public class ReaderFile {
 
-    static String[] title = new String[30];
-    static Double[] price = new Double[50];
+    //static String[] title = new String[30];
+    //static Double[] price = new Double[50];
 
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         parsingFile ( );
-
 
     }
 
     // парсим данные из файла и сохраняем в массивы
-    private static void parsingFile() {
+    private static void parsingFile() throws IOException {
         try (FileReader fr = new FileReader ("products.txt");
              Scanner scanner = new Scanner (fr)
         ) {
             scanner.useLocale (Locale.ENGLISH);
 
+            System.out.printf ("%-25s%-10s%-10s%-9s%n", "Наименование", "Цена", "Кол-во", "Стоимость");
+            System.out.printf ("=======================================================");
+            System.out.println (" ");
             while ((scanner.hasNext ( ))) {
-                for (int i = 0; i < title.length; i++) {
-                    if (scanner.hasNextDouble ( )) {
-                        price[i] = scanner.nextDouble ( );
-                    } else if (scanner.hasNextLine ( )) {
-                        title[i] = scanner.nextLine ( );
-                    }
-                }
+                String name = scanner.nextLine ( );
+                float quantity = scanner.nextFloat ( );
+                float price = scanner.nextFloat ( );
+                float result = price * quantity;
+
+                System.out.printf ("%-24s%-8.2f%-3s%-2.3f%6s%-8.3f%n", name, price, "x", quantity, "=", result);
+                scanner.nextLine ( );
+
             }
+            System.out.printf ("=======================================================");
+
         } catch (IOException e) {
             e.printStackTrace ( );
         }
     }
+    }
 
 
-}
 
