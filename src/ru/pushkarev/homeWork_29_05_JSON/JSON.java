@@ -1,7 +1,6 @@
 package ru.pushkarev.homeWork_29_05_JSON;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import ru.pushkarev.homeWork_29_05_JSON.Joke;
 
 import java.io.*;
 import java.net.URL;
@@ -20,10 +19,7 @@ public class JSON {
 
     public static void main(String[] args) throws IOException {
 
-        Joke joke = new Joke ( );
-
-        ObjectMapper objectMapper = new ObjectMapper ( );
-        objectMapper.writeValue (System.out, joke);
+        Joke joke;
 
         String s = null;
 
@@ -40,16 +36,15 @@ public class JSON {
         } catch (IOException e) {
             e.printStackTrace ( );
         }
-        System.out.println (s);
 
         // получаем шутку из строки (аналогично можно из любого потока)
 
         Reader reader = new StringReader (s);
+        ObjectMapper objectMapper = new ObjectMapper ( );
         joke = objectMapper.readValue (reader, Joke.class);
 
         System.out.println (s);
         System.out.println (joke);
-
     }
 
 
