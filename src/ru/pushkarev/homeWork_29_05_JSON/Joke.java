@@ -7,9 +7,7 @@ public class Joke {
     private int id;
     @JsonIgnore
     private String type;
-    @JsonIgnore
     private String setup;
-
     private String punchline;
 
     public Joke(int id, String type, String setup, String punchline) {
@@ -56,6 +54,7 @@ public class Joke {
         this.setup = setup;
     }
 
+    @JsonProperty("Бред какой - то")
     public String getPunchline() {
         return punchline;
     }

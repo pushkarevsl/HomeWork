@@ -17,14 +17,11 @@ import java.net.URL;
 
 public class JSON {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
-        Joke joke;
+        String s;
 
-        String s = null;
-
-        //считываем из интеренета, формат JSON,
-
+        //считываем из интернета, формат JSON,
         try {
             URL url = new URL ("https://official-joke-api.appspot.com/random_joke");
             try (InputStream is = url.openStream ( );
@@ -32,19 +29,19 @@ public class JSON {
                  BufferedReader bf = new BufferedReader (reader);
             ) {
                 s = bf.readLine ( );
+                System.out.println (s);
+
             }
         } catch (IOException e) {
             e.printStackTrace ( );
         }
 
+
         // получаем шутку из строки (аналогично можно из любого потока)
 
-        Reader reader = new StringReader (s);
-        ObjectMapper objectMapper = new ObjectMapper ( );
-        joke = objectMapper.readValue (reader, Joke.class);
+        // Reader reader = new StringReader (s);
 
-        System.out.println (s);
-        System.out.println (joke);
+
     }
 
 
