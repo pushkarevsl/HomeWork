@@ -2,8 +2,10 @@ package ru.pushkarev.homeWork_29_05_JSON;
 
 import com.fasterxml.jackson.annotation.*;
 
+
 @JsonAutoDetect
 public class Joke {
+
     private int id;
     @JsonIgnore
     private String type;
@@ -54,7 +56,6 @@ public class Joke {
         this.setup = setup;
     }
 
-    @JsonProperty("Бред какой - то")
     public String getPunchline() {
         return punchline;
     }
