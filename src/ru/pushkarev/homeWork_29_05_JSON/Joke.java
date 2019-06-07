@@ -2,14 +2,14 @@ package ru.pushkarev.homeWork_29_05_JSON;
 
 import com.fasterxml.jackson.annotation.*;
 
+
 @JsonAutoDetect
 public class Joke {
+
     private int id;
     @JsonIgnore
     private String type;
-    @JsonIgnore
     private String setup;
-
     private String punchline;
 
     public Joke(int id, String type, String setup, String punchline) {
