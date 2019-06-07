@@ -17,9 +17,12 @@ public class Expirience {
             array[i] = array[i + 1];
             array[i + 1] = temp;
         }
+
+
+        array[array.length - 1] = 0;
+
         for (int i = 0; i < array.length; i++) {
             System.out.print (array[i] + " ");
         }
-
     }
 }

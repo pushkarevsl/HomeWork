@@ -16,27 +16,37 @@ package ru.pushkarev.homeWork_31_05_Arrays;
 
 public class taskFirst {
 
-    static int[][] array = new int[3][10];
+    static int[][] array = new int[10][10];
 
     public static void main(String[] args) {
 
         createArray ( );
-        //printArray ( );
         swap ( );
+        lastElement ( );
 
     }
 
-    private static void swap() {
+    // присвоил последнему элементу значение 0
+    private static void lastElement() {
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length - 1; j++) {
-                int temp = array[i][i];
-                array[i][j] = array[i][j + 1];
-                array[i][j + 1] = temp;
-            }
+            array[i][9] = 0;
         }
         printArray ( );
     }
 
+    // сдвиг элементов
+    private static void swap() {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length - 1; j++) {
+                int temp = array[i][j];
+                array[i][j] = array[i][j + 1];
+                array[i][j + 1] = temp;
+            }
+        }
+        //printArray ( );
+    }
+
+    // заполняем массив элементами
     private static void createArray() {
 
         for (int i = 0; i < array.length; i++) {
