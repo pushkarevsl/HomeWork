@@ -1,6 +1,5 @@
 package ru.pushkarev.comparator;
 
-
 public class Person {
 
     private String name;
@@ -34,4 +33,5 @@ public class Person {
     public void setName(String name) {
         this.name = name;
     }
+
 }
