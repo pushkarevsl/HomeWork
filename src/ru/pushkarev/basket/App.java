@@ -2,7 +2,6 @@ package ru.pushkarev.basket;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Реализовать класс корзины интернет магазина по следующему интерфейсу:
@@ -17,8 +16,7 @@ import java.util.Scanner;
  * int getProductQuantity(String product);                      //достань количество продукта
  * }
  */
-
-public class Main {
+public class App {
 
 
     public static void main(String[] args) {

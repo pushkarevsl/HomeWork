@@ -4,71 +4,54 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Product {
+public class Product implements Comparable {
 
-    private static List<Product> list = new ArrayList<> ( );
+    String titleProduct;
+    int quantity;
 
-    private String product;
-    private int quantity;
+    static List<Product> product = new ArrayList<> ( );
 
     public static void main(String[] args) {
-        addProduct ("vatr", 23);
-        listIterator ( );
-        //removeProduct ("Milk");
 
+        addProduct ("Apple", 21);
+        printList ( );
     }
 
-    private Product(String product, int quantity) {
-        this.product = product;
-        this.quantity = quantity;
-    }
-
-    static void addProduct(String product, int quantity) {
-
-        list.add (new Product ("Milk", 1));
-        list.add (new Product ("Bread", 2));
-        list.add (new Product ("Milk", 3));
-        list.add (new Product ("Water", 4));
-        list.add (new Product ("Milk", 5));
-    }
-
-    static void listIterator() {
-        Iterator i = list.iterator ( );
+    private static void printList() {
+        Iterator i = product.iterator ( );
         while (i.hasNext ( )) {
-            //System.out.println (i.next ( ));
             System.out.println (i.next ( ));
         }
     }
 
-
-    static void removeProduct(String product) {
-        System.out.println (list.equals ("Milk"));
-        list.remove (2);
-        System.out.println (list.contains ("Milk"));
+    private static void addProduct(String titleProduct, int quantity) {
+        product.add (new Product ("Milk", 1));
+        product.add (new Product ("Water", 1));
+        product.add (new Product ("Milk", 1));
+        product.add (new Product ("Bread", 1));
+        product.add (new Product ("Milk", 1));
     }
+
 
     @Override
     public String toString() {
         return "Product{" +
-                "product='" + product + '\'' +
+                "titleProduct='" + titleProduct + '\'' +
                 ", quantity=" + quantity +
                 '}';
     }
 
-    public static List<Product> getList() {
-        return list;
+    public Product(String titleProduct, int quantity) {
+        this.titleProduct = titleProduct;
+        this.quantity = quantity;
     }
 
-    public static void setList(List<Product> list) {
-        Product.list = list;
+    public String getTitleProduct() {
+        return titleProduct;
     }
 
-    public String getProduct() {
-        return product;
-    }
-
-    public void setProduct(String product) {
-        this.product = product;
+    public void setTitleProduct(String titleProduct) {
+        this.titleProduct = titleProduct;
     }
 
     public int getQuantity() {
@@ -79,4 +62,8 @@ public class Product {
         this.quantity = quantity;
     }
 
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
 }
