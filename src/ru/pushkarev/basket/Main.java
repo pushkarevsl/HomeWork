@@ -2,6 +2,7 @@ package ru.pushkarev.basket;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * Реализовать класс корзины интернет магазина по следующему интерфейсу:
@@ -17,13 +18,11 @@ import java.util.List;
  * }
  */
 
-public class Main implements Basketable {
-    List<String> product = new ArrayList<> ( );
-    List<Integer> quantity = new ArrayList<> ( );
+public class Main {
 
 
-    @Override
-    public void addProduct(String product, int quantity) {
+    public static void main(String[] args) {
 
     }
+
 }
