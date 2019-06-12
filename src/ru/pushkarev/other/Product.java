@@ -53,25 +53,7 @@ public class Product {
                 System.out.println (product.get (i));
             }
         }
-
-
     }
-/*
-    @Override
-    public void updateProductQuantity(String product, int quantity) {
-
-    }
-
-    @Override
-    public void clear() {
-
-    }
-
-    @Override
-    public int getProductQuantity(String product) {
-        return 0;
-    }
-*/
 
     @Override
     public String toString() {

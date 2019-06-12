@@ -4,6 +4,8 @@ import java.util.List;
 
 public interface Basket {
 
+    void printPosition();
+
     void addProduct(String product, int quantity);               //добавить продукт и его количество
 
     void removeProduct(String product);                          //удалить только продукт
@@ -12,8 +14,9 @@ public interface Basket {
 
     void clear();                                                //очистка корзины
 
-    List<String> getProducts();                                  //достань продукт
+    List<Position> getProducts();                                  //достань продукт
 
     int getProductQuantity(String product);                      //достань количество продукта
 
+    Position getPosition(String product);
 }

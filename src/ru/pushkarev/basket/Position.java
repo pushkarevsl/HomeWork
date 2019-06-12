@@ -10,6 +10,14 @@ public class Position {
         this.quantity = quantity;
     }
 
+    @Override
+    public String toString() {
+        return "Position{" +
+                "product='" + product + '\'' +
+                ", quantity=" + quantity +
+                '}';
+    }
+
     String getProduct() {
         return product;
     }
