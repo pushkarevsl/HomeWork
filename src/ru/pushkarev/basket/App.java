@@ -33,6 +33,8 @@ public class App {
 
         listBasket.printPosition ( );
         System.out.println (" ");
+        System.out.println (listBasket.getProducts ( ));
+        System.out.println (" ");
         System.out.println (listBasket.getPosition ("Bread"));
         System.out.println (" ");
         System.out.println (listBasket.getProductQuantity ("Water"));
@@ -42,6 +44,5 @@ public class App {
         System.out.println (" ");
         listBasket.clear ( );
         listBasket.printPosition ( );
-        System.out.println (listBasket.getProducts ( ));
     }
 }
