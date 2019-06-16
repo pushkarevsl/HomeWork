@@ -8,39 +8,25 @@ package ru.pushkarev.basket;
   void removeProduct(String product);                          //удалить только продукт
   void updateProductQuantity(String product, int quantity);    //обновить количество продукта
   void clear();                                                //очистка корзины
-  List<String> getProducts();                                  //достань, распечатай продукт
+  Map<String> getProducts();                                  //достань, распечатай продукт
   int getProductQuantity(String product);                      //достань количество продукта
   }
  */
+
+import java.util.Map;
 
 public class App {
 
     public static void main(String[] args) {
         App app = new App ( );
-        app.runList ( );
+        app.runMap ( );
     }
 
-    private void runList() {
-        Basket listBasket = new BasketListImpl ( );
-        listBasket.addProduct ("Milk", 1);
-        listBasket.addProduct ("Milk", 1);
-        listBasket.addProduct ("Water", 1);
-        listBasket.addProduct ("Milk", 1);
-        listBasket.addProduct ("Bread", 1);
-        listBasket.addProduct ("Water", 1);
+    private void runMap() {
+        Basket basketMap = new BasketMapImpl ( );
 
-        listBasket.printPosition ( );
-        System.out.println (" ");
-        System.out.println (listBasket.getProducts ( ));
-        System.out.println (" ");
-        System.out.println (listBasket.getPosition ("Bread"));
-        System.out.println (" ");
-        System.out.println (listBasket.getProductQuantity ("Water"));
-        System.out.println (" ");
-        listBasket.removeProduct ("Milk");
-        listBasket.printPosition ( );
-        System.out.println (" ");
-        listBasket.clear ( );
-        listBasket.printPosition ( );
+        basketMap.addProduct ("qwqd", 21);
+        basketMap.printPosition ( );
+
     }
 }

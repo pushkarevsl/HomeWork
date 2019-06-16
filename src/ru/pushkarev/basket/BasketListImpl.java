@@ -1,5 +1,7 @@
+/*
 package ru.pushkarev.basket;
 
+*/
 /*
   Реализовать класс корзины интернет магазина по следующему интерфейсу:
   <p>
@@ -12,7 +14,8 @@ package ru.pushkarev.basket;
   List<String> getProducts();                                  //достань, распечатай продукт
   int getProductQuantity(String product);                      //достань количество продукта
   }
- */
+ *//*
+
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -21,15 +24,6 @@ import java.util.List;
 public class BasketListImpl implements Basket {
 
     private List<Position> positionList = new ArrayList<> ( );
-
-
-    @Override
-    public void printPosition() {
-        for (Position position : positionList) {
-            System.out.println (position.getProduct ( ) + ": " + position.getQuantity ( ));
-
-        }
-    }
 
     //создаем позицию, происходит вызов метода getPosition, который ищет название и если его нет, то добавляет,
     // иначе добавляет количество продукта к уже имеющемуся.
@@ -80,7 +74,7 @@ public class BasketListImpl implements Basket {
     // Поиск позиции (товара). Проходим по списку позиций, если находим название с данным названием,
 // то возвращаем его, если нет, то ничего не возвращаем (нет такого)
     @Override
-    public Position getPosition(String product) {
+    public String getPosition(String product) {
         for (Position p : positionList) {
             if (p.getProduct ( ).equals (product)) {
                 return p;
@@ -88,5 +82,13 @@ public class BasketListImpl implements Basket {
         }
         return null;
     }
+    @Override
+    public void printPosition() {
+        for (Position position : positionList) {
+            System.out.println (position.getProduct ( ) + ": " + position.getQuantity ( ));
+
+        }
+    }
 
 }
+*/
