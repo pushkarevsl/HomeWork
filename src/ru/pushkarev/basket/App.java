@@ -13,16 +13,14 @@ package ru.pushkarev.basket;
   }
  */
 
-import java.util.List;
-
 public class App {
 
     public static void main(String[] args) {
         App app = new App ( );
-        app.run ( );
+        app.runList ( );
     }
 
-    private void run() {
+    private void runList() {
         Basket listBasket = new BasketListImpl ( );
         listBasket.addProduct ("Milk", 1);
         listBasket.addProduct ("Milk", 1);
