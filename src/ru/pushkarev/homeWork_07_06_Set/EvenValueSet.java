@@ -20,6 +20,7 @@ public class EvenValueSet {
     public static void main(String[] args) {
 
         EvenValueSet evenValueSet = new EvenValueSet ( );
+
         evenValueSet.removeEvenLength ( );
 
     }
@@ -39,11 +40,10 @@ public class EvenValueSet {
 
         set.removeIf (o -> o.length ( ) % 2 == 0);  // сделал через if, вылез warning когда коммит делал,
         // и идея вывела такой код
-
         for (String s : set) {
             System.out.println (s);
         }
-        return null;
+        return set;
     }
 }
 
