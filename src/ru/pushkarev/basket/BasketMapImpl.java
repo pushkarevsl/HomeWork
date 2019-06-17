@@ -12,7 +12,7 @@ import java.util.Map;
  * void removeProduct(String product);                          //удалить только продукт
  * void updateProductQuantity(String product, int quantity);    //обновить количество продукта
  * void clear();                                                //очистка корзины
- * List<String> getProducts();                                  //достань, распечатай продукт
+ * Map<String> getProducts();                                  //достань, распечатай продукт
  * int getProductQuantity(String product);                      //достань количество продукта
  * }
  */
@@ -21,72 +21,78 @@ public class BasketMapImpl implements Basket {
 
     Map<String, Integer> positionMap = new HashMap<> ( );
 
-    /**
-     * Проверка, есть ли такой элемент в мапе. Поиск продукта по ключу.
-     * @return
-     */
-
     @Override
     public String getPosition(String product) {
         for (Map.Entry<String, Integer> entry : positionMap.entrySet ( )) {
             if (entry.getKey ( ).equals (product)) {
-                return entry.getKey ( );
+                return product;
             }
         }
         return null;
     }
 
     /**
-     * Добавляем элемент.
-     * Проверяем через метод getPosition, по ключу, если такой элемент есть, то складываем значения,
-     * если нет, то добавляет количество продукта к уже имеющемуся.
+     * Метод добавления нового продукта. Проходит проверку по ключу, если такого ключа нет, то добавляем,
+     * иначе складываем значения, какое было и новое.
      */
-
+    @Override
     public void addProduct(String product, int quantity) {
 
-        String p = getPosition (product);
-
-        for (Map.Entry<String, Integer> entry : positionMap.entrySet ( )) {
-            if (p == null) {
-                positionMap.put (product, quantity);
-            }
-            // p.setQuantity (p.getQuantity ( ) + quantity);
+       /* for (Map.Entry<String, Integer> entry : positionMap.entrySet ( )) {
+            int newQuantity;*/
+        String key = getPosition (product);
+        if (key == null) {
+            positionMap.put (product, quantity);
         }
     }
 
     @Override
-    public void removeProduct(String title) {
-
+    public void removeProduct(String product) {
+        positionMap.remove (product);
     }
 
+    /**
+     * Обновление количества продукта.
+     * Так как это предусмотрено в методе addProduct, то его и вызываю
+     */
     @Override
-    public void updateProductQuantity(String title, int quantity) {
-
+    public void updateProductQuantity(String product, int quantity) {
+        addProduct (product, quantity);
     }
 
+    /**
+     * Очистка Map
+     */
     @Override
     public void clear() {
-
+        positionMap.clear ( );
     }
 
+    /**
+     * Вывод на экран
+     */
     @Override
     public Map<String, Integer> getProducts() {
-        return null;
-    }
-
-    @Override
-    public int getProductQuantity(String title) {
-        return 0;
-    }
-
-    //получается простой обход, просто вывод на экран.
-    @Override
-    public void printPosition() {
         for (Map.Entry<String, Integer> entry : positionMap.entrySet ( )) {
-            String product = entry.getKey ( );
-            int quantity = entry.getValue ( );
-            System.out.println (product + ": " + quantity + "  шт.");
+            String key = entry.getKey ( );
+            Integer value = entry.getValue ( );
+            System.out.println (key + " : " + value);
         }
+        return positionMap;
     }
 
+    /**
+     * Вывод количества по ключу.
+     */
+    @Override
+    public int getProductQuantity(String product) {
+        int value = 0;
+        for (String key : positionMap.keySet ( )) {
+            value = positionMap.get (key);
+        }
+        return value;
+    }
 }
+
+
+
