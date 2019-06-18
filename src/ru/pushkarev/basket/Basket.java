@@ -4,16 +4,6 @@ import java.util.Map;
 
 public interface Basket {
 
-    /*void printPosition();
-    @Override
-    public void printPosition() {
-        for (Map.Entry<String, Integer> entry : positionMap.entrySet ( )) {
-            String key = entry.getKey ( );
-            Integer value = entry.getValue ( );
-            System.out.println (key + " : " + value);
-        }
-    }*/
-
     void addProduct(String product, int quantity);               //добавить продукт и его количество
 
     void removeProduct(String product);                          //удалить только продукт
