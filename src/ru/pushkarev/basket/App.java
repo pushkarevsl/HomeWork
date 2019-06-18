@@ -31,13 +31,13 @@ public class App {
         basketMap.addProduct ("a2", 22);
         basketMap.addProduct ("a3", 33);
 
-        //basketMap.removeProduct ("a1"); // удаляем элемент по ключу;
+        basketMap.removeProduct ("a1"); // удаляем элемент по ключу;
 
         //basketMap.updateProductQuantity (); //Обновление количества продукта.
 
         basketMap.getProducts ( ); //Вывод на экран;
 
-        //System.out.println (basketMap.getProductQuantity ("a3")); //Вывод количества по ключу.
+        System.out.println (basketMap.getProductQuantity ("a3")); //Вывод количества по ключу.
 
         //basketMap.clear ( ); //Очистка Map
     }
