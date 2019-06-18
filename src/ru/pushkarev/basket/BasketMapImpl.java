@@ -1,5 +1,6 @@
 package ru.pushkarev.basket;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,7 +20,7 @@ import java.util.Map;
 
 public class BasketMapImpl implements Basket {
 
-    Map<String, Integer> positionMap = new HashMap<> ( );
+    private Map<String, Integer> positionMap = new HashMap<> ( );
 
     @Override
     public String getPosition(String product) {
@@ -38,13 +39,15 @@ public class BasketMapImpl implements Basket {
     @Override
     public void addProduct(String product, int quantity) {
 
-       /* for (Map.Entry<String, Integer> entry : positionMap.entrySet ( )) {
-            int newQuantity;*/
+        int totalQuantity;
         String key = getPosition (product);
         if (key == null) {
             positionMap.put (product, quantity);
-        }
+        } /*else {
+             System.out.println (getProductQuantity (product));
+        }*/
     }
+
 
     @Override
     public void removeProduct(String product) {
