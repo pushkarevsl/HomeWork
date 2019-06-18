@@ -1,6 +1,5 @@
-package ru.pushkarev.basket;
+package ru.pushkarev.map.basket;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 

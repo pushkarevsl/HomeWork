@@ -1,4 +1,4 @@
-package ru.pushkarev.basket;
+package ru.pushkarev.map.basket;
 /*
   Реализовать класс корзины интернет магазина по следующему интерфейсу:
   <p>
@@ -12,8 +12,6 @@ package ru.pushkarev.basket;
   int getProductQuantity(String product);                      //достань количество продукта
   }
  */
-
-import java.util.Map;
 
 public class App {
 

@@ -1,4 +1,4 @@
-package ru.pushkarev.basket;
+package ru.pushkarev.map.basket;
 
 import java.util.Map;
 
