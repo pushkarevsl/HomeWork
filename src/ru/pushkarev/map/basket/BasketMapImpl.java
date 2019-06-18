@@ -38,13 +38,10 @@ public class BasketMapImpl implements Basket {
     @Override
     public void addProduct(String product, int quantity) {
 
-        int totalQuantity;
         String key = getPosition (product);
         if (key == null) {
             positionMap.put (product, quantity);
-        } /*else {
-             System.out.println (getProductQuantity (product));
-        }*/
+        }
     }
 
 
