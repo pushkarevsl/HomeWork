@@ -23,20 +23,24 @@ public class App {
     private void runMap() {
         Basket basketMap = new BasketMapImpl ( );
 
-        basketMap.addProduct ("a1", 11);
-        basketMap.addProduct ("a1", 12);
-        basketMap.addProduct ("a1", 13);
-        basketMap.addProduct ("a2", 22);
+        basketMap.addProduct ("a1", 1);
+        basketMap.addProduct ("a1", 10);
+        basketMap.addProduct ("a1", 100);
+        basketMap.addProduct ("a2", 2);
+        basketMap.addProduct ("a2", 20);
         basketMap.addProduct ("a3", 33);
 
-        basketMap.removeProduct ("a1"); // удаляем элемент по ключу;
 
         //basketMap.updateProductQuantity (); //Обновление количества продукта.
 
         basketMap.getProducts ( ); //Вывод на экран;
+        System.out.println ("// Вывод значения по ключу a3");
+        System.out.println (basketMap.getProductQuantity ("a3"));
+        System.out.println ("// удаляем элемент по ключу a1");
+        basketMap.removeProduct ("a1");
+        basketMap.getProducts ( ); //Вывод на экран;
 
-        System.out.println (basketMap.getProductQuantity ("a3")); //Вывод количества по ключу.
+        basketMap.clear ( ); //Очистка Map
 
-        //basketMap.clear ( ); //Очистка Map
     }
 }

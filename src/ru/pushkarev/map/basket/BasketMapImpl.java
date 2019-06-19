@@ -39,11 +39,13 @@ public class BasketMapImpl implements Basket {
     public void addProduct(String product, int quantity) {
 
         String key = getPosition (product);
+
         if (key == null) {
             positionMap.put (product, quantity);
+        } else {
+            positionMap.put (product, positionMap.get (product) + quantity); // с этой строкой я занимался сексом 3 дня
         }
     }
-
 
     @Override
     public void removeProduct(String product) {
