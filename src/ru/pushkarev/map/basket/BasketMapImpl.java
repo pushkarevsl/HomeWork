@@ -47,7 +47,6 @@ public class BasketMapImpl implements Basket {
         }
     }
 
-
     @Override
     public void removeProduct(String product) {
         positionMap.remove (product);
