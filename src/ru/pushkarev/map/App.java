@@ -27,6 +27,12 @@ public class App {
 
     }
 
+    private static void printMap(Map<String, Person> map) {
+        for (Map.Entry<String, Person> entry : map.entrySet ( )) {
+            System.out.println (entry.getKey ( ) + " : " + entry.getValue ( ));
+        }
+    }
+
     private static Map<String, Person> createMap() {
 
         Map<String, Person> book = new HashMap<> ( );
@@ -39,7 +45,7 @@ public class App {
         book.put ("Key2", person2);
         book.put ("Key3", person1);
         book.put ("Key4", person3);
-        book.put ("Key5", person1);
+        book.put ("Key5", person2);
         book.put ("Key6", person4);
 
         return book;
@@ -49,21 +55,18 @@ public class App {
 
         Map<String, Person> copyBook = new HashMap<> (map); // делаю копию карты
         for (Map.Entry<String, Person> copyEntry : copyBook.entrySet ( )) {
-            Person person = copyEntry.getValue ( ); // создал переменную типа персон, с ней буду сравнивать значения
-            int count = 0;
-            for (Map.Entry<String, Person> entry : map.entrySet ( )) {
-                if (person.equals (entry.getValue ( ))) {
-                    count++;
-                }
-                if (count > 2) {
-                    removeItemFromMapByValue (map, person);
-                }
+
+            //попробую сделать через Collections.frequency (), чтобы можно было все дубли удалять
+            int count = Collections.frequency (copyBook.values ( ), copyEntry.getValue ( ));
+            if (count > 1) {
+                removeItemFromMapByValue (map, copyEntry.getValue ( ));
             }
         }
         for (Map.Entry<String, Person> entry : map.entrySet ( )) {
             System.out.println (entry.getKey ( ) + " : " + entry.getValue ( ));
         }
     }
+
 
     private static void removeItemFromMapByValue(Map<String, Person> map, Person value) {
         Map<String, Person> copy = new HashMap<> (map);
